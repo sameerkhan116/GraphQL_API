@@ -1,6 +1,12 @@
-type Post {
+type User {
   id: ID! @unique
-  isPublished: Boolean! @default(value: false)
-  title: String!
-  text: String!
+  name: String!
+  email: String! @unique
+  password: String!
+}
+
+type Link {
+  id: ID! @unique
+  description: String!
+  url: String!
 }
